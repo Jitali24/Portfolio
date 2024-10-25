@@ -101,20 +101,19 @@ function App() {
         "Developing user-friendly web applications with React and Node.js.",
     },
     {
-      role: "IT System Analyst CO-OP",
-      company: "Pernod Ricard",
-      period: "Jan 2024 - Aug 2024",
-      description:
-        "Analyzed system requirements and optimized software applications.",
-    },
-    {
       role: "Full-Stack Developer",
       company: "Toshal Infotech",
       period: "Apr 2022 - Mar 2023",
       description:
         "Built full-stack web applications using React for front end and Node.js for back end.",
     },
-    // Add more experiences as needed
+    {
+      role: "Frontend Developer",
+      company: "Krtya Softwares",
+      period: "Jan 2024 - Aug 2024",
+      description:
+        "Analyzed system requirements and optimized software applications.",
+    },
   ];
 
   return (
@@ -140,7 +139,7 @@ function App() {
                 </a>
               </li>
               <li>
-                <a href="#shop" className="enlarge-on-hover">
+                <a href="#experience" className="enlarge-on-hover">
                   Experience
                 </a>
               </li>
