@@ -99,7 +99,7 @@ function App() {
 
   const experiences = [
     {
-      role: "Intern - Technical Systems Analyst",
+      role: "Software Development Intern",
       company: "University of Windsor",
       period: "May 2024 - Aug 2024",
       description:
@@ -130,40 +130,6 @@ function App() {
   return (
     <div className="App">
       {/* Header */}
-      {/* <header className="header">
-        <div className="header-content">
-          <nav>
-            <ul>
-              <li>
-                <a href="#about" className="enlarge-on-hover">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="#work" className="enlarge-on-hover">
-                  Projects
-                </a>
-              </li>
-              <li>
-                <a href="#home" className="enlarge-on-hover">
-                  Jitali Hadiya
-                </a>
-              </li>
-              <li>
-                <a href="#experience" className="enlarge-on-hover">
-                  Experience
-                </a>
-              </li>
-              <li>
-                <a href="#contacts" className="enlarge-on-hover">
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </header> */}
-
       <header className="header">
         <div className="header-content">
           {/* Hamburger/Close icon */}
@@ -356,6 +322,10 @@ function App() {
       {/* Experience */}
       <div className="timeline-section" id="experience">
         <h1>Experience</h1>
+        <h3>
+          Explore the projects and roles that have shaped my development
+          journey, each one a step towards creating impactful digital solutions.
+        </h3>
         <div className="timeline">
           {experiences.map((exp, index) => (
             <motion.div
