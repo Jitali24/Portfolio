@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./App.css";
@@ -9,15 +9,20 @@ import Card3 from "../src/assests/java.png";
 import Card4 from "../src/assests/js.png";
 import Card5 from "../src/assests/react.png";
 import Card6 from "../src/assests/node.png";
+import Card7 from "../src/assests/Saas.png";
+
 import ProfileImage from "../src/assests/jitali.png";
 //import CursorTracker from "./components/Cursor";
+
 import linkedin from "../src/assests/linkedin.png";
 import github from "../src/assests/github.png";
 import contact from "../src/assests/contact.png";
 import Contact from "../src/assests/Contact us.gif";
+
 import Pommelogy from "../src/assests/Pommelogy.png";
 import Skillsage from "../src/assests/Skillsage.png";
 import NewsApp from "../src/assests/NewsApp.png";
+
 import Coding from "../src/assests/Coding.gif";
 
 import { motion } from "framer-motion";
@@ -90,63 +95,65 @@ function App() {
     }, 2000); // Change message every 2 seconds
 
     return () => clearInterval(messageInterval);
-  }, []); // Empty dependency array ensures this effect runs only once
+  }, []);
 
   const experiences = [
     {
-      role: "Web Developer",
-      company: "Ultimate Coders",
-      period: "Sep 2023 - Present",
+      role: "Software Development Intern",
+      company: "University of Windsor",
+      period: "May 2024 - Aug 2024",
       description:
-        "Developing user-friendly web applications with React and Node.js.",
+        "Worked on web-based application development using full-stack technologies, focusing on front-end interfaces and back-end integration. Participated in end-to-end testing, debugging, and optimizing application performance.",
     },
     {
       role: "Full-Stack Developer",
       company: "Toshal Infotech",
       period: "Apr 2022 - Mar 2023",
       description:
-        "Built full-stack web applications using React for front end and Node.js for back end.",
+        "Developed full-stack web and mobile applications using ReactJS for front-end and NodeJS for back-end development, integrating custom middleware and RESTful APIs. Consulted with clients to understand requirements, created mock-ups, and performed end-to-end testing and debugging.",
     },
     {
-      role: "Frontend Developer",
+      role: "Front-End Developer",
       company: "Krtya Softwares",
-      period: "Jan 2024 - Aug 2024",
+      period: "Jan 2022 - Mar 2022",
       description:
-        "Analyzed system requirements and optimized software applications.",
+        "Designed and integrated user-friendly front-end interfaces using ReactJS, with a focus on responsive design and performance. Collaborated with back-end developers to ensure seamless API integration and conducted quality control and testing.",
     },
   ];
+
+  const [menuActive, setMenuActive] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuActive(!menuActive);
+  };
 
   return (
     <div className="App">
       {/* Header */}
       <header className="header">
         <div className="header-content">
-          <nav>
+          {/* Hamburger/Close icon */}
+          <div className="hamburger" onClick={toggleMenu}>
+            {menuActive ? "✕" : "☰"}
+          </div>
+
+          {/* Navigation menu */}
+          <nav className={menuActive ? "nav-active" : ""}>
             <ul>
               <li>
-                <a href="#about" className="enlarge-on-hover">
-                  About
-                </a>
+                <a href="#about">About</a>
               </li>
               <li>
-                <a href="#work" className="enlarge-on-hover">
-                  Projects
-                </a>
+                <a href="#work">Projects</a>
               </li>
               <li>
-                <a href="#home" className="enlarge-on-hover">
-                  Jitali Hadiya
-                </a>
+                <a href="#home">Jitali Hadiya</a>
               </li>
               <li>
-                <a href="#experience" className="enlarge-on-hover">
-                  Experience
-                </a>
+                <a href="#experience">Experience</a>
               </li>
               <li>
-                <a href="#contacts" className="enlarge-on-hover">
-                  Contact
-                </a>
+                <a href="#contacts">Contact</a>
               </li>
             </ul>
           </nav>
@@ -192,7 +199,7 @@ function App() {
           </p>
 
           <a
-            href="/Jitali_Hadiya_Resume.pdf" // Path to your resume file
+            href="src/files/JitaliH_Resume.pdf" // Path to your resume file
             download="Jitali_Hadiya_Resume.pdf" // Name for the downloaded file
             className="about-link"
           >
@@ -284,42 +291,30 @@ function App() {
           {/* Card 1 */}
           <div className="card">
             <img src={Card1} alt="HTML" />
-            <div className="tooltip">HTML</div>
           </div>
           {/* Card 2 */}
           <div className="card">
             <img src={Card2} alt="CSS" />
-            <div className="tooltip">
-              <h4>CSS</h4>
-            </div>
           </div>
           {/* Card 3 */}
           <div className="card">
             <img src={Card3} alt="Java" />
-            <div className="tooltip">
-              <h4>Java</h4>
-            </div>
           </div>
           {/* Card 4 */}
           <div className="card">
             <img src={Card4} alt="JavaScript" />
-            <div className="tooltip">
-              <h4>JavaScript</h4>
-            </div>
           </div>
           {/* Card 5 */}
           <div className="card">
             <img src={Card5} alt="React JS" />
-            <div className="tooltip">
-              <h4>React JS</h4>
-            </div>
           </div>
           {/* Card 6 */}
           <div className="card">
             <img src={Card6} alt="Node JS" />
-            <div className="tooltip">
-              <h4>Node JS</h4>
-            </div>
+          </div>
+          {/* Card 7 */}
+          <div className="card">
+            <img src={Card7} alt="SaaS" />
           </div>
         </div>
       </div>
@@ -327,6 +322,10 @@ function App() {
       {/* Experience */}
       <div className="timeline-section" id="experience">
         <h1>Experience</h1>
+        <h3>
+          Explore the projects and roles that have shaped my development
+          journey, each one a step towards creating impactful digital solutions.
+        </h3>
         <div className="timeline">
           {experiences.map((exp, index) => (
             <motion.div
@@ -442,8 +441,6 @@ function App() {
           <p>&copy; 2024 Jitali Hadiya | Designed with passion and code</p>
         </div>
       </footer>
-
-      {/*  */}
     </div>
   );
 }
