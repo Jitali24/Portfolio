@@ -969,7 +969,19 @@
 }
 
 @media (max-width: 600px) {
-  .footer-section ul {
-    padding-left: 2rem;
+  .footer-section ul li {
+    justify-content: center;
+  }
+
+  .footer-section {
+    margin-inline: auto;
+  }
+
+  .social-icons {
+    gap: 2rem;
+  }
+
+  .footer-bottom {
+    padding-top: 2rem;
   }
 }
