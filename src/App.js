@@ -199,8 +199,8 @@ function App() {
           </p>
 
           <a
-            href="src/files/JitaliH_Resume.pdf" // Path to your resume file
-            download="Jitali_Hadiya_Resume.pdf" // Name for the downloaded file
+            href="https://drive.google.com/uc?export=download&id=1u7L4_CMD14FHzhGODhR_2BetLZPy8CGW" // Modified Google Drive link
+            download="Jitali_Hadiya_Resume.pdf"
             className="about-link"
           >
             Download Resume
