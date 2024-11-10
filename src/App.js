@@ -330,7 +330,7 @@ function App() {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className="timeline-item"
+              className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
