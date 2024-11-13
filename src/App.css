@@ -147,6 +147,17 @@
     font-size: 2rem;
     margin-top: 2rem;
   }
+
+  .header-content .hamburger {
+    position: fixed;
+    z-index: 9;
+  }
+
+  .header-content nav ul {
+    height: 100vh;
+    top: -1rem;
+    justify-content: space-evenly;
+  }
 }
 
 @media (max-width: 480px) {
@@ -716,6 +727,14 @@
   }
 
   .timeline-item:before {
+    left: 0;
+  }
+
+  .timeline::before {
+    opacity: 0;
+  }
+
+  .timeline-item.right {
     left: 0;
   }
 
