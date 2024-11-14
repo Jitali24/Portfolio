@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import emailjs from "emailjs-com";
 import "./App.css";
 // import CardImage from "../src/assests/background.jpg";
 import Card1 from "../src/assests/html.png";
@@ -125,6 +126,45 @@ function App() {
 
   const toggleMenu = () => {
     setMenuActive(!menuActive);
+  };
+
+  const [formState, setFormState] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [submissionMessage, setSubmissionMessage] = useState("");
+
+  const handleChange = (e) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .send(
+        "service_x67chzn", // Replace with your EmailJS Service ID
+        "template_kp7vt6i", // Replace with your EmailJS Template ID
+        {
+          name: formState.name,
+          email: formState.email,
+          message: formState.message,
+        },
+        "tXcZUVjlnHlkWNXQM" // Replace with your EmailJS User ID
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setSubmissionMessage("Information submitted!");
+          setFormState({ name: "", email: "", message: "" });
+        },
+        (error) => {
+          console.log(error.text);
+          setSubmissionMessage("Failed to send. Please try again.");
+        }
+      );
   };
 
   return (
@@ -348,7 +388,7 @@ function App() {
       </div>
 
       {/* Contact Section */}
-      <div className="contact-section" id="contacts">
+      {/* <div className="contact-section" id="contacts">
         <h1>Contact Me</h1>
         <p>
           Whether you want to get in touch, talk about a project collaboration,
@@ -374,6 +414,59 @@ function App() {
               <button type="submit" className="submit-btn">
                 Send Message
               </button>
+            </form>
+          </div>
+        </div>
+      </div> */}
+      <div className="contact-section" id="contacts">
+        <h1>Contact Me</h1>
+        <p>
+          Whether you want to get in touch, talk about a project collaboration,
+          or just say hi, feel free to drop a message!
+        </p>
+
+        <div className="contact-body">
+          <div className="contact-body-img">
+            <img src={Contact} alt="Contact" />
+          </div>
+
+          <div className="contact-container">
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="input-group">
+                <input
+                  type="text"
+                  name="name"
+                  value={formState.name}
+                  onChange={handleChange}
+                  required
+                  placeholder="Name"
+                />
+              </div>
+              <div className="input-group">
+                <input
+                  type="email"
+                  name="email"
+                  value={formState.email}
+                  onChange={handleChange}
+                  required
+                  placeholder="Email"
+                />
+              </div>
+              <div className="input-group">
+                <textarea
+                  name="message"
+                  value={formState.message}
+                  onChange={handleChange}
+                  required
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" className="submit-btn">
+                Send Message
+              </button>
+              {submissionMessage && (
+                <p className="submission-message">{submissionMessage}</p>
+              )}
             </form>
           </div>
         </div>
