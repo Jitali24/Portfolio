@@ -840,6 +840,16 @@
   color: #0c1d2f;
 }
 
+.submission-message {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
+}
+
+.contact-form .submission-message.error {
+  color: red;
+}
+
 /* Responsive Adjustments */
 
 /* Medium screens (Tablets, up to 992px) */
