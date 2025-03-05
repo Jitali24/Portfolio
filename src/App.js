@@ -11,18 +11,21 @@ import Card4 from "../src/assests/js.png";
 import Card5 from "../src/assests/react.png";
 import Card6 from "../src/assests/node.png";
 import Card7 from "../src/assests/Saas.png";
+// import Card8 from "../src/assests/django.png";
 
 import ProfileImage from "../src/assests/jitali.png";
 //import CursorTracker from "./components/Cursor";
 
 import linkedin from "../src/assests/linkedin.png";
 import github from "../src/assests/github.png";
-import contact from "../src/assests/contact.png";
+// import contact from "../src/assests/contact.png";
+import instagram from "../src/assests/instagram.png";
 import Contact from "../src/assests/Contact us.gif";
 
 import Pommelogy from "../src/assests/Pommelogy.png";
 import Skillsage from "../src/assests/Skillsage.png";
 import NewsApp from "../src/assests/NewsApp.png";
+import Skola from "../src/assests/Skola.png";
 
 import Coding from "../src/assests/Coding.gif";
 
@@ -102,21 +105,21 @@ function App() {
     {
       role: "Software Development Intern",
       company: "University of Windsor",
-      period: "May 2024 - Aug 2024",
+      period: "2024",
       description:
         "Worked on web-based application development using full-stack technologies, focusing on front-end interfaces and back-end integration. Participated in end-to-end testing, debugging, and optimizing application performance.",
     },
     {
       role: "Full-Stack Developer",
       company: "Toshal Infotech",
-      period: "Apr 2022 - Mar 2023",
+      period: "2023",
       description:
         "Developed full-stack web and mobile applications using ReactJS for front-end and NodeJS for back-end development, integrating custom middleware and RESTful APIs. Consulted with clients to understand requirements, created mock-ups, and performed end-to-end testing and debugging.",
     },
     {
       role: "Front-End Developer",
       company: "Krtya Softwares",
-      period: "Jan 2022 - Mar 2022",
+      period: "2022",
       description:
         "Designed and integrated user-friendly front-end interfaces using ReactJS, with a focus on responsive design and performance. Collaborated with back-end developers to ensure seamless API integration and conducted quality control and testing.",
     },
@@ -257,17 +260,26 @@ function App() {
             shapes my work
           </h3>
         </div>
+
+        {/* Pommelogy */}
         <div className="projects">
-          <img
-            src={Pommelogy}
-            alt="Project: Apple Variety Identification Application"
-            className="project-image"
-          />
+          <div className="project-card">
+            <img
+              src={Pommelogy}
+              alt="Project: Apple Variety Identification Application"
+              className="project-image"
+            />
+            <div className="hover-list">
+              <ul>
+                <li>Identify Apple Varieties</li>
+                <li>Visual Analysis of Features</li>
+                <li>User-Friendly Responsive UI</li>
+              </ul>
+            </div>
+          </div>
           <div className="project-content">
-            <h1 className="swipe-down-text">
-              Apple Variety Identification Application
-            </h1>
-            <h2 className="swipe-down-text">
+            <h1>Pommelogy</h1>
+            <h2>
               A web-based tool that helps users identify apple varieties using
               machine learning and a detailed database. The app analyzes visual
               features like skin color, size, and shape to predict varieties,
@@ -275,18 +287,37 @@ function App() {
               React.js, it features a user-friendly, responsive interface,
               making it accessible for growers and enthusiasts.
             </h2>
-            {/* <h3 className="swipe-down-text">Explore my work</h3> */}
+            <div className="learn-more">
+              <br></br>
+              <a
+                href="https://drive.google.com/file/d/1WDsu4ZqcsBNvX8Eon7kA_YuSOEZJTACh/view?usp=sharing"
+                className="learn-more-link"
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </div>
-        <div className="projects">
-          <img
-            src={Skillsage}
-            alt="Project: Skillsage"
-            className="project-image"
-          />
+
+        {/* SkillSage */}
+        <div className="projects alternate">
+          <div className="project-card">
+            <img
+              src={Skillsage}
+              alt="Project: Skillsage"
+              className="project-image"
+            />
+            <div className="hover-list">
+              <ul>
+                <li>Skill-Building Paths</li>
+                <li>Cross-Platform Compatibility</li>
+                <li>Personalized Resources</li>
+              </ul>
+            </div>
+          </div>
           <div className="project-content">
-            <h1 className="swipe-down-text">SkillSage</h1>
-            <h2 className="swipe-down-text">
+            <h1>SkillSage</h1>
+            <h2>
               A React Native-based mobile application designed to help users
               discover and develop new skills. The app provides personalized
               skill-building paths, resources, and progress tracking. It
@@ -294,30 +325,94 @@ function App() {
               compatibility, delivering a seamless user experience on both iOS
               and Android devices.
             </h2>
-            {/* <h3 className="swipe-down-text">Explore my work</h3> */}
+            <div className="learn-more">
+              <br></br>
+              <a
+                href="https://drive.google.com/file/d/1k_jwsxWCV7jCRS6ovpys5JlobskMOGln/view?usp=drive_link"
+                className="learn-more-link"
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </div>
+
+        {/* Skola */}
         <div className="projects">
-          <img
-            src={NewsApp}
-            alt="Project: News App"
-            className="project-image"
-          />
+          <div className="project-card">
+            <img
+              src={Skola}
+              alt="Project: Skillsage"
+              className="project-image"
+            />
+            <div className="hover-list">
+              <ul>
+                <li>Skill-Building Paths</li>
+                <li>Cross-Platform Compatibility</li>
+                <li>Personalized Resources</li>
+              </ul>
+            </div>
+          </div>
           <div className="project-content">
-            <h1 className="swipe-down-text">News App</h1>
-            <h2 className="swipe-down-text">
+            <h1>Skola</h1>
+            <h2>
+              Skola is a web-based Learning Management System (LMS) that
+              streamlines the educational process for both educators and
+              students. It enables course creation, progress tracking, real-time
+              communication, and offers a responsive interface for a smooth and
+              interactive learning experience.
+            </h2>
+            <div className="learn-more">
+              <br></br>
+              <a
+                href="https://lms-skola.vercel.app/"
+                className="learn-more-link"
+              >
+                Learn More →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* News App */}
+        <div className="projects alternate">
+          <div className="project-card">
+            <img
+              src={NewsApp}
+              alt="Project: News App"
+              className="project-image"
+            />
+            <div className="hover-list">
+              <ul>
+                <li>Voice Commands with Alan AI</li>
+                <li>Real-Time News Updates</li>
+                <li>Search and Filter by Categories</li>
+              </ul>
+            </div>
+          </div>
+          <div className="project-content">
+            <h1>News App</h1>
+            <h2>
               A voice-enabled news app that integrates Alan AI to provide
               real-time news updates through voice commands. Users can interact
               hands-free to search and filter news by categories, making the app
               accessible and easy to use. This project included technologies
               such as Alan AI SDK, JavaScript, APIs for news data.
             </h2>
-            {/* <h3 className="swipe-down-text">Explore my work</h3> */}
+            <div className="learn-more">
+              <br></br>
+              <a
+                href="https://alan-bot-ai.netlify.app/"
+                className="learn-more-link"
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Cards Section */}
+      {/* Tools & Technology Section */}
       <div className="cards-container">
         <div className="title">
           <h1>Tools & Technology</h1>
@@ -356,6 +451,10 @@ function App() {
           <div className="card">
             <img src={Card7} alt="SaaS" />
           </div>
+          {/* Card 8 */}
+          {/* <div className="card">
+            <img src={Card8} alt="Django" />
+          </div> */}
         </div>
       </div>
 
@@ -377,6 +476,7 @@ function App() {
               viewport={{ once: true, amount: 0.8 }}
             >
               <div className="timeline-content">
+                <div className="circle"></div>
                 <h2>{exp.role}</h2>
                 <h3>{exp.company}</h3>
                 <span>{exp.period}</span>
@@ -388,36 +488,6 @@ function App() {
       </div>
 
       {/* Contact Section */}
-      {/* <div className="contact-section" id="contacts">
-        <h1>Contact Me</h1>
-        <p>
-          Whether you want to get in touch, talk about a project collaboration,
-          or just say hi, feel free to drop a message!
-        </p>
-
-        <div className="contact-body">
-          <div className="contact-body-img">
-            <img src={Contact} alt="Contact" />
-          </div>
-
-          <div className="contact-container">
-            <form className="contact-form">
-              <div className="input-group">
-                <input type="text" required placeholder="Name" />
-              </div>
-              <div className="input-group">
-                <input type="email" required placeholder="Email" />
-              </div>
-              <div className="input-group">
-                <textarea required placeholder="Your Message"></textarea>
-              </div>
-              <button type="submit" className="submit-btn">
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div> */}
       <div className="contact-section" id="contacts">
         <h1>Contact Me</h1>
         <p>
@@ -489,13 +559,13 @@ function App() {
                 <i className="fas fa-envelope">jitalihhadiya@gmail.com</i>
                 {/* <a href="/"></a> */}
               </li>
-              <li>
+              {/* <li>
                 <i className="fas fa-phone">+1 226 961 8754</i>
-                {/* <a href="/"></a> */}
+                {/* <a href="/"></a> 
               </li>
               <li>
                 <i className="fas fa-map-marker-alt">Windsor, ON</i>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -519,12 +589,12 @@ function App() {
                 <img src={github} alt="GitHub" className="social-image" />
               </a>
               <a
-                href="mailto:jitalihhadiya@gmail.com"
+                href="https://www.instagram.com/"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={contact} alt="Twitter" className="social-image" />
+                <img src={instagram} alt="Twitter" className="social-image" />
               </a>
             </div>
           </div>

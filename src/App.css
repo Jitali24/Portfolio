@@ -221,13 +221,17 @@
 
 .project-image {
   border: 1px solid aliceblue;
-  width: 300px;
+  /* width: 300px;
   height: 400px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px; */
   opacity: 0;
   transform: translateY(-100px);
   animation: swipeDown 1s forwards;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 /* Swipe Down Text */
@@ -235,6 +239,52 @@
   opacity: 0;
   transform: translateY(-20px);
   animation: swipeDown 1s forwards;
+}
+
+.project-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.hover-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 10px;
+}
+
+.hover-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hover-list li {
+  margin: 0.5rem 0;
+}
+
+.project-card:hover .hover-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.projects.alternate {
+  flex-direction: row-reverse;
 }
 
 @keyframes swipeDown {
@@ -264,10 +314,14 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .project-section .projects {
     flex-direction: row;
     align-items: center;
+  }
+
+  .projects.alternate {
+    flex-direction: row-reverse;
   }
 
   .project-section .projects .project-content {
@@ -306,6 +360,10 @@
 
   .project-section .projects {
     padding: 0;
+  }
+
+  .projects.alternate {
+    flex-direction: row;
   }
 
   .project-section .projects .project-content {
