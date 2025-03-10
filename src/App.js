@@ -29,6 +29,7 @@ import Pommelogy from "../src/assests/Pommelogy.png";
 import Skillsage from "../src/assests/Skillsage.png";
 import NewsApp from "../src/assests/NewsApp.png";
 import Skola from "../src/assests/Skola.png";
+import Fintrek from "../src/assests/Fintrek.png";
 
 import Coding from "../src/assests/Coding.gif";
 
@@ -45,7 +46,7 @@ function App() {
       { text: "Bonjour, Jitali Hadiya ici.", color: "#6A5ACD" }, // French
       { text: "Hola, Jitali Hadiya aquí.", color: "#FF4500" }, // Spanish
       { text: "Hallo, Jitali Hadiya hier.", color: "#2E8B57" }, // German
-      { text: "नमस्ते, मैं जिटाली हड़िया हूं।", color: "#DAA520" }, // Hindi
+      { text: "नमस्ते, मैं जिताली हड़िया हूं।", color: "#DAA520" }, // Hindi
       { text: "こんにちは、ジタリ ハディヤです。", color: "#FF69B4" }, // Japanese
       { text: "你好，Jitali Hadiya 在这里。", color: "#20B2AA" }, // Chinese
     ];
@@ -262,6 +263,41 @@ function App() {
             Explore my journey through projects, experiences, and the drive that
             shapes my work
           </h3>
+        </div>
+
+        {/* Fintrek */}
+        <div className="projects alternate">
+          <div className="project-card">
+            <img
+              src={Fintrek}
+              alt="Project: Fintrek"
+              className="project-image"
+            />
+            <div className="hover-list">
+              <ul>
+                <li>React JS</li>
+                <li>Vite</li>
+                <li>Typescript</li>
+              </ul>
+            </div>
+          </div>
+          <div className="project-content">
+            <h1>Fintrek</h1>
+            <h2>
+              Fintrek is a modern finance management platform that empowers
+              users to take control of their finances. It offers smart expense
+              tracking, intuitive visual analytics, and enterprise-grade
+              security, all within a sleek, responsive interface. Fintrek
+              delivers real-time updates and smooth animations, making financial
+              management both efficient and accessible
+            </h2>
+            <div className="learn-more">
+              <br></br>
+              <a href="https://fintrek.vercel.app/" className="learn-more-link">
+                View App →
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* Pommelogy */}
