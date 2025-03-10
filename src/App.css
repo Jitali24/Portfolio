@@ -220,7 +220,7 @@
 }
 
 .project-image {
-  border: 1px solid aliceblue;
+  border: 1px solid white;
   /* width: 300px;
   height: 400px;
   object-fit: cover;
@@ -402,12 +402,13 @@
   gap: 20px;
   justify-content: center;
   padding: 2rem 0;
+  max-width: 1000px;
 }
 
 /* Card Styling */
 .card {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-color: #141d2f;
   border: 1px solid aliceblue;
   border-radius: 10px;
@@ -638,6 +639,24 @@
   .about-link {
     padding: 6px 12px;
   }
+}
+
+/* Projects */
+.learn-more {
+  font-size: 16px;
+  color: #a3a3ff;
+  font-style: italic;
+}
+
+.learn-more a {
+  border: 1.5px solid #a3a3ff;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.learn-more a:hover {
+  color: #0d0d2b;
+  background-color: #a3a3ff;
 }
 
 /* Experience */

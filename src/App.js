@@ -11,7 +11,10 @@ import Card4 from "../src/assests/js.png";
 import Card5 from "../src/assests/react.png";
 import Card6 from "../src/assests/node.png";
 import Card7 from "../src/assests/Saas.png";
-// import Card8 from "../src/assests/django.png";
+import Card8 from "../src/assests/django.png";
+import Card9 from "../src/assests/firebase.png";
+import Card10 from "../src/assests/mongodb.png";
+import Card11 from "../src/assests/sql.png";
 
 import ProfileImage from "../src/assests/jitali.png";
 //import CursorTracker from "./components/Cursor";
@@ -242,7 +245,7 @@ function App() {
           </p>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=1u7L4_CMD14FHzhGODhR_2BetLZPy8CGW" // Modified Google Drive link
+            href="https://drive.google.com/file/d/1EzVQtBYpFee3kOnqG488wjhwzSe1Xvbo/view?usp=drive_link" // Modified Google Drive link
             download="Jitali_Hadiya_Resume.pdf"
             className="about-link"
           >
@@ -271,9 +274,10 @@ function App() {
             />
             <div className="hover-list">
               <ul>
-                <li>Identify Apple Varieties</li>
-                <li>Visual Analysis of Features</li>
-                <li>User-Friendly Responsive UI</li>
+                <li>React JS</li>
+                <li>Python</li>
+                <li>ML</li>
+                <li>Firebase</li>
               </ul>
             </div>
           </div>
@@ -293,7 +297,7 @@ function App() {
                 href="https://drive.google.com/file/d/1WDsu4ZqcsBNvX8Eon7kA_YuSOEZJTACh/view?usp=sharing"
                 className="learn-more-link"
               >
-                Learn More →
+                View App →
               </a>
             </div>
           </div>
@@ -309,9 +313,9 @@ function App() {
             />
             <div className="hover-list">
               <ul>
-                <li>Skill-Building Paths</li>
-                <li>Cross-Platform Compatibility</li>
-                <li>Personalized Resources</li>
+                <li>React Native</li>
+                <li>Django</li>
+                <li>Firebase</li>
               </ul>
             </div>
           </div>
@@ -326,12 +330,12 @@ function App() {
               and Android devices.
             </h2>
             <div className="learn-more">
-              <br></br>
+              <br />
               <a
                 href="https://drive.google.com/file/d/1k_jwsxWCV7jCRS6ovpys5JlobskMOGln/view?usp=drive_link"
                 className="learn-more-link"
               >
-                Learn More →
+                View App →
               </a>
             </div>
           </div>
@@ -347,9 +351,9 @@ function App() {
             />
             <div className="hover-list">
               <ul>
-                <li>Skill-Building Paths</li>
-                <li>Cross-Platform Compatibility</li>
-                <li>Personalized Resources</li>
+                <li>ReactJS</li>
+                <li>NodeJS</li>
+                <li>MongoDB</li>
               </ul>
             </div>
           </div>
@@ -368,7 +372,7 @@ function App() {
                 href="https://lms-skola.vercel.app/"
                 className="learn-more-link"
               >
-                Learn More →
+                View App →
               </a>
             </div>
           </div>
@@ -384,9 +388,9 @@ function App() {
             />
             <div className="hover-list">
               <ul>
-                <li>Voice Commands with Alan AI</li>
-                <li>Real-Time News Updates</li>
-                <li>Search and Filter by Categories</li>
+                <li>JavaScript</li>
+                <li>Script using AI</li>
+                <li>Responsive Design</li>
               </ul>
             </div>
           </div>
@@ -405,7 +409,7 @@ function App() {
                 href="https://alan-bot-ai.netlify.app/"
                 className="learn-more-link"
               >
-                Learn More →
+                View App →
               </a>
             </div>
           </div>
@@ -452,9 +456,21 @@ function App() {
             <img src={Card7} alt="SaaS" />
           </div>
           {/* Card 8 */}
-          {/* <div className="card">
+          <div className="card">
             <img src={Card8} alt="Django" />
-          </div> */}
+          </div>
+          {/* Card 9 */}
+          <div className="card">
+            <img src={Card9} alt="Django" />
+          </div>
+          {/* Card 10 */}
+          <div className="card">
+            <img src={Card10} alt="Django" />
+          </div>
+          {/* Card 11 */}
+          <div className="card">
+            <img src={Card11} alt="Django" />
+          </div>
         </div>
       </div>
 
@@ -589,12 +605,12 @@ function App() {
                 <img src={github} alt="GitHub" className="social-image" />
               </a>
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/__sweet__angelhrtz__"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src={instagram} alt="Twitter" className="social-image" />
+                <img src={instagram} alt="Instagram" className="social-image" />
               </a>
             </div>
           </div>
