@@ -15,7 +15,6 @@ import Card8 from "../src/assests/django.png";
 import Card9 from "../src/assests/firebase.png";
 import Card10 from "../src/assests/mongodb.png";
 import Card11 from "../src/assests/sql.png";
-
 import ProfileImage from "../src/assests/jitali.png";
 //import CursorTracker from "./components/Cursor";
 
@@ -34,11 +33,35 @@ import Fintrek from "../src/assests/Fintrek.png";
 import Coding from "../src/assests/Coding.gif";
 
 import { motion } from "framer-motion";
+// import Blog from "./Blog";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const messagesRef = useRef(null);
+
+  // const [posts] = useState([
+  //   {
+  //     title: "Building a Modern Portfolio with React",
+  //     date: "March 10, 2025",
+  //     summary:
+  //       "Learn how to build a modern and responsive portfolio using React and GSAP.",
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Mastering CSS Animations",
+  //     date: "March 5, 2025",
+  //     summary: "A deep dive into creating smooth and engaging CSS animations.",
+  //     link: "#",
+  //   },
+  //   {
+  //     title: "Getting Started with Firebase",
+  //     date: "February 28, 2025",
+  //     summary:
+  //       "An introduction to Firebase and how to integrate it into your projects.",
+  //     link: "#",
+  //   },
+  // ]);
 
   useEffect(() => {
     const messages = [
@@ -56,6 +79,38 @@ function App() {
       ".header-content",
       { scale: 0, opacity: 0 },
       { scale: 1, opacity: 1, duration: 1 }
+    );
+
+    // Skills Animation
+    gsap.fromTo(
+      ".skill-icon",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        stagger: 0.1,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: ".skills-section",
+          start: "top 80%",
+        },
+      }
+    );
+
+    // Experience Animation
+    gsap.fromTo(
+      ".experience-card",
+      { opacity: 0, x: -100 },
+      {
+        opacity: 1,
+        x: 0,
+        stagger: 0.2,
+        duration: 0.8,
+        scrollTrigger: {
+          trigger: ".experience-section",
+          start: "top 80%",
+        },
+      }
     );
 
     // Project Section Animation
@@ -199,6 +254,9 @@ function App() {
               <li>
                 <a href="#experience">Experience</a>
               </li>
+              {/* <li>
+                <a href="#blog">Blog</a>
+              </li> */}
               <li>
                 <a href="#contacts">Contact</a>
               </li>
@@ -465,53 +523,53 @@ function App() {
         <div className="cards">
           {/* Card 1 */}
           <div className="card">
-            <img src={Card1} alt="HTML" />
+            <img src={Card1} alt="HTML" className="skill-icon" />
           </div>
           {/* Card 2 */}
           <div className="card">
-            <img src={Card2} alt="CSS" />
+            <img src={Card2} alt="CSS" className="skill-icon" />
           </div>
           {/* Card 3 */}
           <div className="card">
-            <img src={Card3} alt="Java" />
+            <img src={Card3} alt="Java" className="skill-icon" />
           </div>
           {/* Card 4 */}
           <div className="card">
-            <img src={Card4} alt="JavaScript" />
+            <img src={Card4} alt="JavaScript" className="skill-icon" />
           </div>
           {/* Card 5 */}
           <div className="card">
-            <img src={Card5} alt="React JS" />
+            <img src={Card5} alt="React JS" className="skill-icon" />
           </div>
           {/* Card 6 */}
           <div className="card">
-            <img src={Card6} alt="Node JS" />
+            <img src={Card6} alt="Node JS" className="skill-icon" />
           </div>
           {/* Card 7 */}
           <div className="card">
-            <img src={Card7} alt="SaaS" />
+            <img src={Card7} alt="SaaS" className="skill-icon" />
           </div>
           {/* Card 8 */}
           <div className="card">
-            <img src={Card8} alt="Django" />
+            <img src={Card8} alt="Django" className="skill-icon" />
           </div>
           {/* Card 9 */}
           <div className="card">
-            <img src={Card9} alt="Django" />
+            <img src={Card9} alt="Django" className="skill-icon" />
           </div>
           {/* Card 10 */}
           <div className="card">
-            <img src={Card10} alt="Django" />
+            <img src={Card10} alt="Django" className="skill-icon" />
           </div>
           {/* Card 11 */}
           <div className="card">
-            <img src={Card11} alt="Django" />
+            <img src={Card11} alt="Django" className="skill-icon" />
           </div>
         </div>
       </div>
 
       {/* Experience */}
-      <div className="timeline-section" id="experience">
+      <div className="timeline-section experience-section" id="experience">
         <h1>Experience</h1>
         <h3>
           Explore the projects and roles that have shaped my development
@@ -521,7 +579,9 @@ function App() {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              className={`timeline-item ${index % 2 === 0 ? "left" : "right"}`}
+              className={`timeline-item experience-card ${
+                index % 2 === 0 ? "left" : "right"
+              }`}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.3 }}
@@ -538,6 +598,11 @@ function App() {
           ))}
         </div>
       </div>
+
+      {/* Blog */}
+      {/* <section className="blog-section" id="blog">
+        <Blog posts={posts} />
+      </section> */}
 
       {/* Contact Section */}
       <div className="contact-section" id="contacts">
