@@ -304,7 +304,7 @@ function App() {
           </p>
 
           <a
-            href="https://drive.google.com/file/d/1EzVQtBYpFee3kOnqG488wjhwzSe1Xvbo/view?usp=drive_link" // Modified Google Drive link
+            href="https://drive.google.com/file/d/1m1cWXXwp4VKfw7tjwnfxD2Zg_krMDyez/view?usp=drive_link"
             download="Jitali_Hadiya_Resume.pdf"
             className="about-link"
           >
